@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>My Budget Tracker</h1>
+            <p>Manage your money wisely</p>
+        </header>
+
+        <section class="budget-box">
+            <h2>Monthly Budget</h2>
+            <input type="number" id="budget" placeholder="Enter your budget">
+            <button onclick="setBudget()">Set Budget</button>
+        </section>
+
+        <section class="summary">
+            <div class="card">
+                <h3>Total Budget</h3>
+                <p id="totalBudget">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Income</h3>
+                <p id="totalIncome">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Balance</h3>
+                <p id="balance">0</p>
+            </div>
+        </section>
+
+        <section class="transaction-box">
+            <h2>Add Transaction</h2>
+
+            <input type="text" id="description"
+                placeholder="Transaction description">
+
+            <input type="number" id="amount"
+                placeholder="Enter amount">
+
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+
+            <select id="category">
+                <option value="Salary">Salary</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button onclick="addTransaction()">Add Transaction</button>
+        </section>
+
+        <section class="history">
+            <h2>Transaction History</h2>
+            <ul id="transactionList"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
